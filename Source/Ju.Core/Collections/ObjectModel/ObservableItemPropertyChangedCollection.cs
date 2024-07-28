@@ -11,12 +11,6 @@ public sealed class ObservableItemPropertyChangedCollection<T> : ObservableColle
     where T : IObservableNotifyPropertyChanged
 {
 
-    public ObservableItemPropertyChangedCollection()
-    {
-        System.Diagnostics.Debug.WriteLine($"Create {this}.");
-    }
-
-
     public new void Add(T item)
     {
         subscribings.Add(item, item.PropertyChanged.Subscribe(WhenItemPropertyChanged).AddTo(disposables));
