@@ -7,7 +7,7 @@ using System.Reactive.Linq;
 
 namespace Ju.Collections.ObjectModel;
 
-public sealed class ObservableItemPropertyChangedCollection<T> : ObservableCollection<T>, IDisposable
+public class ObservableItemPropertyChangedCollection<T> : ObservableCollection<T>, IDisposable
     where T : IObservableNotifyPropertyChanged
 {
 
